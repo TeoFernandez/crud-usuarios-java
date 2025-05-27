@@ -8,8 +8,10 @@ public class Main {
         UsuarioDAO dao = new UsuarioDAO();
 
         //Crear nuevo usuario
-        Usuario nuevo = new Usuario("Juan Pérez", "juan@gmail.com");
+        Usuario nuevo = new Usuario("Teo Fernández", "teo@gmail.com");
         dao.agregarUsuario(nuevo);
+        Usuario nuevo1 = new Usuario("Nicolas Garcia", "nicolas@gmail.com");
+        dao.agregarUsuario(nuevo1);
 
         //Mostrar todos
         List<Usuario> usuarios = dao.obtenerUsuarios();
@@ -22,10 +24,10 @@ public class Main {
         }
 
         //Actualizar usuario (por ejemplo el ID 1)
-        Usuario actualizado = new Usuario(1,"Juan Actualizado", "nuevo@gmail.com");
+        Usuario actualizado = new Usuario(1,"Juan Perez", "nuevo@gmail.com");
         dao.actualizarUsuarios(actualizado);
 
         //Eliminar usuario (por ejemplo, el ID 2)
-        dao.eliminarUsuario(2);
+        dao.eliminarUsuario(3);
     }
 }

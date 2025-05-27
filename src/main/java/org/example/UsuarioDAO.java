@@ -61,7 +61,7 @@ public class UsuarioDAO {
     }
 
     public void eliminarUsuario(int id){
-        String sql= "DELATE FROM usuarios WHERE id=?";
+        String sql= "DELETE FROM usuarios WHERE id=?";
 
         try(Connection conn = Conexion.conectar();
             PreparedStatement stmt = conn.prepareStatement(sql)){
